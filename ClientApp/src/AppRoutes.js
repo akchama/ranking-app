@@ -1,4 +1,3 @@
-import {FetchData} from "./components/FetchData";
 import {Home} from "./components/Home";
 import MovieImageArr from "./components/MovieImages";
 import AlbumImageArr from "./components/AlbumImages";
@@ -8,10 +7,6 @@ const AppRoutes = [
     {
         index: true,
         element: <Home/>
-    },
-    {
-        path: '/fetch-data',
-        element: <FetchData/>
     },
     {
         path: '/rank-movies',
