@@ -1,18 +1,146 @@
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333333;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+h1, h2 {
+    color: #FFFFFF;
 }
 
-code {
-  color: #E01A76;
+p {
+    color: #FFFFFF;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items-not-ranked {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    flex-wrap: wrap;  /* To ensure that the items wrap if they overflow the container's width */
+}
+
+.unranked-cell {
+    width: 80px;
+    text-align: center;
+    margin: 0 3px; /* top and bottom margin as 0, left and right margin as 3px */
+}
+
+
+.unranked-cell img, .rank-cell img {
+    width: 100%;
+    height: 100%;
+}
+
+.rankings {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: center;
+    margin-bottom: 15px;
+}
+
+.rank-row {
+    height: 100px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-top: 3px;  /* Adjusted the margins to keep some spacing between rows */
+    margin-bottom: 4px;
+}
+
+.top-tier {
+    background-color: #FFFFB3;
+}
+
+.middle-tier {
+    background-color: #ACD6AA;
+}
+
+.bottom-tier {
+    background-color: #8B4513;
+}
+
+.worst-tier {
+    background-color: #B22222;
+}
+
+.rank-cell {
+    width: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* To center the content within the cell */
+    margin: 0;  /* Ensure no margins */
+    padding: 0; /* Ensure no padding */
+}
+
+.row-label {
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* To center the content within the cell */
+    margin-right: 3px;  /* To ensure some spacing between the label and the subsequent items */
+    flex-shrink: 0; /* To ensure the label doesn't shrink if space becomes tight */
+}
+
+.row-label h4 {
+    font-size: 14px; /* Adjust this value as per your design needs */
+    font-weight: bold;
+    margin: 0;  /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.reload {
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.reload:active,
+.reload:hover {
+    outline: 0;
+}
+
+.reload span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.reload:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .reload {
+        font-size: 24px;
+        min-width: 196px;
+    }
 }
